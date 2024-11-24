@@ -6,3 +6,5 @@ class Avaliacao:
     @property
     def nota(self):
         return self._nota
+
+

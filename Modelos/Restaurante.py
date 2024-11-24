@@ -8,6 +8,7 @@ class Restaurante:
         self._categoria = categoria.upper()
         self._status = False
         self._avaliacao = []
+        self._cardapio = []
         Restaurante.Restaurantes.append(self)
 
     def __str__(self) -> str:
@@ -48,6 +49,15 @@ class Restaurante:
             return str(media)
 
 
+    def adicionar_bebida_no_cardapio(self, bebida):
+        self._cardapio.append(bebida)
 
+    def adicionar_prato_no_cardapio(self, prato):
+        self._cardapio.append(prato)    
 
-        
+    @property
+    def listar_cardapio(self):
+        print(f'{'Nome do item'.ljust(20)} | {'Preço'.ljust(20)} ')
+        for item in self._cardapio:
+            print(f'{item._nome.ljust(20)} | {str(item._preco).ljust(20)}')
+

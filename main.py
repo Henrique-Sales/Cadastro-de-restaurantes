@@ -1,20 +1,19 @@
 from Modelos.Restaurante import Restaurante
+from Modelos.Cardapio.bebida import Bebida
+from Modelos.Cardapio.prato import Prato
 
 
 PizzaB = Restaurante('Pizt', 'Pizzaria')
-PizzaB.receber_avaliacao("Henri",0)
-PizzaB.receber_avaliacao("Henri",1)
-PizzaB.receber_avaliacao("Henri",4)
 
-Mexico = Restaurante('Chin sh', 'Chinesa')
-Mexico.receber_avaliacao("henrique", 5)
-Mexico.receber_avaliacao("julho", 2)
+Suco = Bebida("Suco Melancia", 5.0, "Grande")
+Pao = Prato("Pao", 2.0, "Pao frances")
 
-
-bk = Restaurante('Burguer King', 'Fast-food')
+PizzaB.adicionar_bebida_no_cardapio(Pao)
+PizzaB.adicionar_bebida_no_cardapio(Suco)
 
 def main():
-    Restaurante.listar_restaurantes()
+    PizzaB.listar_cardapio
+
 
 
 
